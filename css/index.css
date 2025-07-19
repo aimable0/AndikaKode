@@ -1,0 +1,131 @@
+/* variables */
+:root {
+    --orange-color: #FE602F;
+    --black-color: #111624;
+    --blue-color: #08A5D4;
+    --gree-color: #A2BF00;
+    --green-color: #AEB684;
+    --yellow-color: #F5D25C;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'mulish';
+    background-color: #F9FBFF;
+}
+
+/* typography */
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.home {
+    color: var(--orange-color);
+}
+
+.btn a {
+    color: white;
+}
+
+button {
+    color: white;
+    background-color: var(--orange-color);
+    padding: .5em 1.6em;
+    border-radius: 50px;
+    border: 0;
+    font-family: inherit;
+}
+
+.dive {
+    font-family: 'atma';
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: var(--black-color);
+}
+
+.span-orange {
+    color: var(--orange-color);
+}
+
+.span-blue {
+    color: var(--blue-color);
+}
+
+.span-green {
+    color: var(--gree-color);
+}
+
+.main-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .5px;
+}
+
+
+.join-creators .join-para {
+    color: var(--black-color);
+    font-size: 2.5rem;
+    /* font-family: 'Manrope', sans-serif; */
+    font-weight: 700;
+}
+
+
+/* layout */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navs {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.2em;
+    font-size: .9em;
+}
+
+
+.btn {
+    background-color: var(--orange-color);
+    color: white;
+    padding: .6em 1.5em;
+    border-radius: 50px;
+}
+
+/* layout for three kids */
+.aside-content {
+    margin-top: 2em;
+}
+
+.kids-circle-area {
+    background-image: url("../img/kids/kids-circle-highresolution.svg");
+    height: 200px;
+    background-repeat: no-repeat;
+}
+
+/* right banner */
+.right-banner {
+    background-image: url("../img/Right-banner-HD.png");
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* flex image part */
+/* .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    flex-direction: column;
+} */
