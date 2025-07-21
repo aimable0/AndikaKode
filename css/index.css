@@ -15,11 +15,41 @@ body {
 }
 
 
-/* gennerall layout */
+/* genneral layout */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {  /* Small screens (phones) */
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {  /* Tablets */
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) { /* Laptops */
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) { /* Desktops */
+  .container {
+    max-width: 1280px;
+  }
+}
 
 
 
 /* typography */
+h1 {
+    font-family: 'atma', sans-serif;
+}
+
 li {
     list-style: none;
 }
@@ -48,8 +78,10 @@ button {
     font-family: 'atma';
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     color: var(--black-color);
+    padding-right: 100px;
+    letter-spacing: 2px;
 }
 
 .span-orange {
@@ -70,20 +102,28 @@ button {
     letter-spacing: .5px;
 }
 
+.join-creators {
+    border-left: 2px solid rgb(236, 236, 236);
+    height: fit-content;
+    padding-left: 1em;
+    margin-left: .5em;
+}
 
 .join-creators .join-para {
     color: var(--black-color);
-    font-size: 2.5rem;
-    /* font-family: 'Manrope', sans-serif; */
+    font-size: 1.5rem;
     font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-family: 'Manrope';
+    font-weight: bold;
 }
-
 
 /* layout */
 .header {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
 .navs {
@@ -116,21 +156,19 @@ button {
     background-image: url("../img/kids/kids-circle-highresolution.svg");
     height: 200px;
     background-repeat: no-repeat;
-}
-
-/* right banner */
-.right-banner {
-    background-image: url("../img/Right-banner-HD.png");
-    height: 400px;
-    background-repeat: no-repeat;
+    width: 100%;
     background-size: contain;
 }
 
-/* flex image part */
-/* .flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: gray;
-    flex-direction: column;
-} */
+/* right banner */
+.right-banner img{
+    max-width: 450px;
+    min-width: 300px;
+    width: 100%;
+}
+
+/* more styles */
+.home-para-intro {
+    padding-right: 50px;
+}
+

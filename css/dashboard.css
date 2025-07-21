@@ -1,0 +1,184 @@
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 4px;
+}
+
+.dashboard-grid .profile {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.dashboard-grid .progress-content {
+    grid-column-start: 3;
+    grid-column-end: -1;
+}
+
+/* styling chapter circles */
+
+.chapter .chapter-number {
+    background-color: rgb(91, 138, 91);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+/* circles grid area */
+.chapters {
+    display: grid;
+    grid-template-areas:
+    "c1 . c3 ."
+    "c1 . c3 ."
+    "c1 . c3 ."
+    ". c2 . c4"
+    ". c2 . c4"
+    ". c2 . c4";
+}
+
+.chapter-completion-rate > p {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: center;
+}
+
+.chapter {
+    margin: 0px auto;
+}
+
+.chapter:nth-child(1) {
+    grid-area: c1;
+}
+
+.chapter:nth-child(2) {
+    grid-area: c2;
+}
+.chapter:nth-child(3) {
+    grid-area: c3;
+}
+.chapter:nth-child(4) {
+    grid-area: c4;
+}
+
+.chapter-number {
+    border: .15px solid lightgray;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.chapter-number p {
+    color: white;
+    /* text-shadow: 0 0 1 black; */
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.chapter-number.greeny {
+    background-color: #AEB684;
+}
+.chapter-number.orange {
+    background-color: #EA420E;
+}
+.chapter-number.yellow {
+    background-color: #F6D824;
+}
+.chapter-number.grey {
+    background-color: #000000ad;
+}
+
+/* styling stylish underlines */
+#continue-coding {
+    color: #C52F00;
+    border: 2px solid #FACEB6;
+    background-color: #fe5f2f3e;
+    font-weight: 700;
+    font-family: 'atma', sans-serif;
+    letter-spacing: .25px;
+    font-size: 1.25rem;
+    padding: .5em 4em;
+    text-align: center;
+    display: block;
+    margin: 3em auto;
+}
+
+.progress-content h1{
+    font-family: 'atma', sans-serif;
+    margin-bottom: 0px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#road-underline {
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 4em;
+}
+
+
+/* syling profile */
+.profile > p {
+    font-family: 'atma', sans-serif;
+}
+
+#name-underline {
+    display: block;
+    margin-top: 0;
+    margin-left: .5em;
+    width: 35%;
+    margin-bottom: 3em;
+}
+.profile .user-name {
+    font-size: 3rem;
+    font-family: 'mulish', sans-serif;
+    margin-bottom: 0;
+}
+
+#hi {
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-family: 'atma';
+    margin-bottom: 0;
+}
+
+#ready-to-code {
+    margin-top: 1em;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+#yes-btn {
+    margin-top: .5em;
+    margin-bottom: 4em;
+    padding: .1em 4em;
+    font-size: 1.5rem;
+    font-family: 'atma', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.streak-circles {
+    display: flex;
+}
+
+
+.streak-circle {
+    background-color: #F6F6F6;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dcdcdc;
+    color: #A2BF00;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+

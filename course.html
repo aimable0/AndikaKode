@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>course</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/course.css">
+
+    <!-- skulpt -->
+    <script src="js/skulpt.min.js"></script>
+    <script src="js/skulpt-stdlib.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+    <!-- skulpt -->
+
+</head>
+<body>
+    <div class="container">
+        <div class="course-main-content">
+            <h1 id="course-title"><span class="span-orange">chapter 1</span>: Introduction to python & Printstatetement</h1>
+            <img id="course-img" src="img/course-play.png" alt="">
+            <div class="row-course-data">
+                <p class="course-intro">1. Introduction to Python</p>
+                <ul class="course-data">
+                    <li>Goal: Understand what python is and how to write basic code</li>
+                    <li>concepts: print(), strings, simple text output</li>
+                    <li>Activity: print their name, favorite color, or a funny sentence</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h2 class="time-to">Time to practice!</h2>
+
+            <div class="row-course-data">
+                <p>Let'ts print our favorite pet</p>
+                <ul>
+                    :) Using the knowledge you just learnt try and do the exercise above in the code box below.
+                </ul>
+            </div>
+        </div>
+
+        <!-- kode and output -->
+        <div id="kode-and-output">
+            <div class="kode-div">
+                <h3>Kode</h3>
+                <form>
+                    <textarea id="yourcode" cols="40" rows="10"></textarea><br>
+                    <button id="kode-run" type="button" onclick="runit()">Run</button>
+                </form>
+            </div>
+            <div class="output-div">
+                <h3>Output</h3>
+                <pre id="output"></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- BEGINING skulpt -->
+    <script type="text/javascript">
+        // output functions are configurable.  This one just appends some text
+        // to a pre element.
+        function outf(text) {
+            var mypre = document.getElementById("output");
+            mypre.innerHTML = mypre.innerHTML + text;
+        }
+        function builtinRead(x) {
+            if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+                    throw "File not found: '" + x + "'";
+            return Sk.builtinFiles["files"][x];
+        }
+
+        // Here's everything you need to run a python program in skulpt
+        // grab the code from your textarea
+        // get a reference to your pre element for output
+        // configure the output function
+        // call Sk.importMainWithBody()
+        function runit() {
+        var prog = document.getElementById("yourcode").value;
+        var mypre = document.getElementById("output");
+        mypre.innerHTML = '';
+        Sk.pre = "output";
+        Sk.configure({output:outf, read:builtinRead});
+        (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+        var myPromise = Sk.misceval.asyncToPromise(function() {
+            return Sk.importMainWithBody("<stdin>", false, prog, true);
+        });
+        myPromise.then(function(mod) {
+            console.log('success');
+        },
+            function(err) {
+            console.log(err.toString());
+        });
+        }
+    </script>
+
+    <!-- include a graphic canvas -->
+    <div id="mycanvas"></div>
+
+    <!-- skulpt -->
+</body>
+</html>
