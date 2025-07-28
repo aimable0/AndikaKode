@@ -1,0 +1,141 @@
+/* all styles */
+:root {
+
+    --primary-blck: #474343;
+}
+body {
+    background-color: #e3e3e3d6;
+    color: var(--primary-blck);
+    font-size: .9rem;
+}
+
+.about-us-hero {
+    background-color: var(--white-grey);
+    padding-bottom: 2em;
+    padding-top: 1em;
+    color: var(--primary-blck);
+}
+
+.about-us-hero h1 {
+    color: inherit;
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.about-us-hero h4 {
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--primary-orange);
+    font-weight: 800;
+    margin: 0;
+}
+
+.who-are-we {
+    padding-top: 2em;
+}
+
+.who-are-we-title {
+    text-align: center;
+}
+@media (min-width: 675px) {
+    .who-are-we-title {
+        font-size: 2rem;
+        padding-top: 1em;
+        margin-bottom: .75em;
+    }
+}
+
+.who-are-we-par {
+    padding: 2em;
+    background-color: #DFDFDF;
+}
+
+@media (min-width: 675px) {
+
+    .desktop-design {
+        display: block;
+    }
+
+    .about-us-flex {
+        display: flex;
+    }
+    .who-are-we-par {
+        width: 45%;
+        padding: 4em;
+    }
+
+}
+
+/* we are remmittance */
+.we-are-rem {
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 600;
+    margin-top: 0;
+    color: #575757;
+}
+.are {
+    letter-spacing: 15px;
+}
+
+.we-are-div {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ceo-img {
+    margin: 4em auto 1em;
+    padding: 4em auto 0;
+}
+.ceo-word {
+    text-align: center;
+}
+.ceo-word p {
+    padding: 2em;
+    font-style: italic;
+    font-size: .75rem;
+    letter-spacing: .5px;
+    color: #616161;
+    padding-top: 0;
+}
+
+@media (min-width: 675px) {
+    .ceo-word {
+        margin-top: 8em;
+    }
+    .ceo-word p{
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: .9rem;
+    }
+}
+
+#quote-sign {
+    margin: 0 auto 4em;
+}
+
+/* footer  */
+.upper-footer {
+    padding-top: 4em;
+}
+.footer-section, .copyright {
+    color: #a3a3a3;
+}
+
+.about-us-main {
+    max-width: 1000px;
+    grid-column: 1 / -1;
+    margin: 0px auto;
+}
+
+.header {
+    max-width: 1000px;
+    margin: 0px auto;
+}

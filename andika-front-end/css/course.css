@@ -137,3 +137,13 @@ textarea {
     }
 
 }
+
+
+/* grid resizing */
+.course-main-content,
+.practice-section,
+#kode-and-output {
+    max-width: 1000px;
+    grid-column: 1/-1;
+}
+

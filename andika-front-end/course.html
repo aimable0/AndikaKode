@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/course.css">
-
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/grid.css">
     <!-- skulpt -->
     <script src="js/skulpt.min.js"></script>
     <script src="js/skulpt-stdlib.js"></script>
@@ -18,6 +19,25 @@
 </head>
 <body>
     <div class="container">
+         <!-- header -->
+        <div class="header">
+            <nav class="header">
+                <div class="logo">
+                    <img src="img/logo/logo-hd.svg" alt="">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="home">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <!-- <li><a href="#">Challenges</a></li> -->
+                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="btn get-started"><a href="dashboard.html">Dashboard</a></li>
+                    <!-- <li class="btn get-started"><a href="register.html">Get Started</a></li> -->
+                </ul>
+            </nav>
+        </div>
+        <!-- header ends here -->
+
         <div class="course-main-content">
             <h1 id="course-title"><span class="span-orange">chapter 1</span>: Introduction to python & Printstatetement</h1>
             <img id="course-img" src="img/course-play.png" alt="">
@@ -30,7 +50,7 @@
                 </ul>
             </div>
         </div>
-        <div>
+        <div class="practice-section">
             <h2 class="time-to">Time to practice!</h2>
 
             <div class="row-course-data">
@@ -56,6 +76,12 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <p class="footer-para"> &copy; 2025 <span>AndikaKode</span> | All rights reserved</p>
+        </div>
+    </footer>
 
     <!-- BEGINING skulpt -->
     <script type="text/javascript">

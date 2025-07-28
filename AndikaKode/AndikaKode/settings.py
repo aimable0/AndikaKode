@@ -31,8 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "app",   #andika app
+    "app",  # andika app
     "newyear",
+    "todo",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

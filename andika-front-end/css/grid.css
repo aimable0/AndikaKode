@@ -16,11 +16,9 @@
 }
 
 .footer {
-    background-color: rgb(156, 37, 156);
     grid-column-start: 1;
     grid-column-end: -1;
 }
-
 
 /* making content grid */
 .content {

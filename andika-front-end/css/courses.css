@@ -8,10 +8,18 @@
     height: 150px;
 }
 
-.grid {
-    max-width: 1000px;
+.courses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: auto;
     gap: 2rem;
+}
+
+/* grid styles */
+.courses{
+    grid-column: 1 / -1;
+}
+
+.courses h1 {
+    text-align: center;
 }

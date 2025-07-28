@@ -1,7 +1,5 @@
 h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-family: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 500px;
+    text-align: center;
 }

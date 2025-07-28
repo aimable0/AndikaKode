@@ -1,0 +1,12 @@
+{% extends './layout.html' %}
+{% block body %}
+    <p>{{ session }}</p>
+    <ul>
+        {% for task in tasks %}
+            <li>{{task}}</li>
+        {% empty %}
+            <li>No tasks.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'todo:add' %}">Add task</a>
+{% endblock %}

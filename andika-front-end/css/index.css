@@ -15,34 +15,35 @@ body {
 }
 
 
+/* GENERAL GRIDS */
+
+
+@media (min-width: 640px) {  /* Small screens (phones) */
+    .container {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {  /* Tablets */
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) { /* Laptops */
+    .container {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) { /* Desktops */
+    .container {
+        max-width: 1280px;
+    }
+}
+
 /* genneral layout */
 .container {
-  max-width: 100%;
   margin: 0 auto;
   padding: 1rem;
 }
-
-@media (min-width: 640px) {  /* Small screens (phones) */
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {  /* Tablets */
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) { /* Laptops */
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) { /* Desktops */
-  .container {
-    max-width: 1280px;
-  }
-}
-
 
 
 /* typography */
@@ -172,3 +173,21 @@ button {
     padding-right: 50px;
 }
 
+
+
+/* footer */
+.footer-para {
+    text-align: center;
+    border-top: 1.5px solid rgba(48, 58, 61, 0.168);
+    padding-top: 30px;
+}
+
+.footer-para {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+/* trying something */
+nav > ul > li > a:hover {
+    color: var(--orange-color);
+}
