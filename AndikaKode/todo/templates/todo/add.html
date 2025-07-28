@@ -1,7 +1,7 @@
 {% extends './layout.html' %}
 {% block body %}
     <h1>Add tasks</h1>
-    <form action="http://127.0.0.1:8000/todo/add/" method="post">
+    <form action="{% url 'todo:add' %}" method="post">
         {% csrf_token %}
         {{ form }}
         <!-- <input type="text" name="task">
