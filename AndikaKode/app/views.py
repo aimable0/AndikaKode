@@ -7,9 +7,15 @@ from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
-def index(request):
-    return render(request, "app/index.html")
+def home(request):
+    return render(request, "app/home.html")
 
+
+def courses(request):
+    return render(request, "app/courses.html")
+
+def course(request):
+    return render(request, "app/single_course.html")
 
 def registerPage(request):
     form = CreateUserForm()
@@ -35,7 +41,7 @@ def loginPage(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect("app/index.html")
+            return redirect("app/home.html")
         else:
             messages.info(request, 'Username or Password is incorrect')
             return render(request, "app/login.html")
@@ -46,3 +52,13 @@ def logoutUser(request):
     # /!\: remember to add the link in the nava bar that lets the user logout
     logout(request)
     return redirect('andikakode:login')
+
+
+def dashboard(request):
+    return render(request, "app/dashboard.html")
+
+def about(request):
+    return render(request, "app/about.html")
+
+def contact(request):
+    return render(request, "app/contact.html")

@@ -1,0 +1,193 @@
+/* variables */
+:root {
+    --orange-color: #FE602F;
+    --black-color: #111624;
+    --blue-color: #08A5D4;
+    --gree-color: #A2BF00;
+    --green-color: #AEB684;
+    --yellow-color: #F5D25C;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'mulish';
+    background-color: #F9FBFF;
+}
+
+
+/* GENERAL GRIDS */
+
+
+@media (min-width: 640px) {  /* Small screens (phones) */
+    .container {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {  /* Tablets */
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) { /* Laptops */
+    .container {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) { /* Desktops */
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* genneral layout */
+.container {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+/* typography */
+h1 {
+    font-family: 'atma', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.home {
+    color: var(--orange-color);
+}
+
+.btn a {
+    color: white;
+}
+
+button {
+    color: white;
+    background-color: var(--orange-color);
+    padding: .5em 1.6em;
+    border-radius: 50px;
+    border: 0;
+    font-family: inherit;
+}
+
+.dive {
+    font-family: 'atma';
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    color: var(--black-color);
+    padding-right: 100px;
+    letter-spacing: 2px;
+}
+
+.span-orange {
+    color: var(--orange-color);
+}
+
+.span-blue {
+    color: var(--blue-color);
+}
+
+.span-green {
+    color: var(--gree-color);
+}
+
+.main-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .5px;
+}
+
+.join-creators {
+    border-left: 2px solid rgb(236, 236, 236);
+    height: fit-content;
+    padding-left: 1em;
+    margin-left: .5em;
+}
+
+.join-creators .join-para {
+    color: var(--black-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-family: 'Manrope';
+    font-weight: bold;
+}
+
+/* layout */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navs {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.2em;
+    font-size: .9em;
+}
+
+
+.btn {
+    background-color: var(--orange-color);
+    color: white;
+    padding: .6em 1.5em;
+    border-radius: 50px;
+}
+
+/* layout for three kids */
+.aside-content {
+    margin-top: 2em;
+}
+
+.kids-circle-area {
+    background-image: url("../img/kids/kids-circle-highresolution.svg");
+    height: 200px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: contain;
+}
+
+/* right banner */
+.right-banner img{
+    max-width: 450px;
+    min-width: 300px;
+    width: 100%;
+}
+
+/* more styles */
+.home-para-intro {
+    padding-right: 50px;
+}
+
+
+
+/* footer */
+.footer-para {
+    text-align: center;
+    border-top: 1.5px solid rgba(48, 58, 61, 0.168);
+    padding-top: 30px;
+}
+
+.footer-para {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+/* trying something */
+nav > ul > li > a:hover {
+    color: var(--orange-color);
+}

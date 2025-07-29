@@ -1,0 +1,139 @@
+:root {
+    --white-grey: #f8f8f8;
+    --primary-orange: #C9732C;
+    --primary-blck: #474343;
+}
+
+body {
+    background-color: #e3e3e3d6;
+}
+
+.contact-us-hero {
+    background-color: var(--white-grey);
+    padding-bottom: 2em;
+    padding-top: 1em;
+    color: var(--primary-blck);
+}
+
+.contact-us-hero h4 {
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--primary-orange);
+    font-weight: 800;
+    margin: 0;
+}
+
+.contact-us-hero h1 {
+    color: inherit;
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.contact-us-section-one {
+    padding: .5em;
+}
+
+.contact-us-main-title {
+    font-size: 1.5rem;
+    margin-top: 1.5em;
+}
+
+.contact-us-form input {
+    display: block;
+    margin-bottom: 1em;
+    padding: .5em 1em;
+    font-size: .9rem;
+    border-radius: 5px;
+    border: 1px solid rgb(173, 173, 173);
+    background-color: #e3e3e3d6;
+    width: 300px;
+}
+
+.contact-us-form textarea {
+    font-size: .9rem;
+    font-family: 'poppins';
+    background-color: #e3e3e3d6;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid rgb(173, 173, 173);
+}
+
+.contact-us-form input::placeholder {
+    color: var(--primary-blck);
+    font-weight: 300;
+}
+
+#contact-us-btn {
+    background-color: var(--primary-orange);
+    border-radius: 50px;
+    color: white;
+    text-transform: uppercase;
+    border: 0;
+    padding: .75em 1.5em;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-top: 2em;
+    width: 110px;
+}
+
+.address-box {
+    margin: 4em auto;
+    color: #525252;
+}
+
+.address-box ul {
+    margin-left: 5em;
+    font-size: 1rem;
+}
+
+.address-box {
+    background-color: #DFDFDF;
+    padding: 2em;
+    height: min-content;
+}
+
+/* footer  */
+.upper-footer {
+    padding-top: 4em;
+}
+.footer-section, .copyright {
+    color: #a3a3a3;
+}
+
+/* contact -us large screen */
+@media (min-width: 675px) {
+
+    .contact-us-section-one {
+        display: flex;
+        width: 100%;
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
+
+    .contact-us-form-section {
+        width: 55%;
+    }
+}
+
+/* griding layout */
+.contact-us-hero {
+    grid-column: 1 / -1;
+    background-color: transparent;
+}
+
+.contact-us-section-one {
+    grid-column: 1/-1;
+    margin: 0px auto;
+    max-width: 1000px;
+}
+#contact-us-btn {
+    background-color: #525252;
+}
+
+/* fitting the about us section */
+.header {
+    max-width: 1000px;
+    margin: 0px auto;
+}
