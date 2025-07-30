@@ -2,10 +2,11 @@
 {% block body %}
     <div class="container">
         <div class="course-main-content">
-            <h1 id="course-title"><span class="span-orange">chapter 1</span>: Introduction to python & Printstatetement</h1>
-            <!-- <img id="course-img" src="img/course-play.png" alt=""> -->
+            <h1 id="course-title"><span class="span-orange">chapter</span>: {{ course.title }}</h1>
+            <p class="course-description">{{ course.description }}</p>
 
-            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+            <!-- Embedded Video -->
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;" class="course-video">
                 <iframe
                     src="https://www.youtube.com/embed/bdUqQidffPE?rel=0"
                     frameborder="0"
@@ -13,13 +14,19 @@
                     style="position:absolute; top:0; left:0; width:100%; height:100%;">
                 </iframe>
             </div>
+
             <div class="row-course-data">
-                <p class="course-intro">1. Introduction to Python</p>
-                <ul class="course-data">
-                    <li>Goal: Understand what python is and how to write basic code</li>
-                    <li>concepts: print(), strings, simple text output</li>
-                    <li>Activity: print their name, favorite color, or a funny sentence</li>
-                </ul>
+                <p class="course-intro">{{ course.title }}</p>
+                <!-- Goals -->
+                <!-- <ul class="course-data"> -->
+                <!-- </ul> -->
+                    <h2>What You'll Learn</h2>
+                    <ul class="course-data">
+                        {% for goal in course.goals %}
+                            <li>- {{ goal }}</li>
+                        {% endfor %}
+                    </ul>
+                    
             </div>
         </div>
         <div class="practice-section">
@@ -33,6 +40,8 @@
             </div>
         </div>
 
+
+    
         <!-- kode and output -->
         <div id="kode-and-output">
             <div class="kode-div">
@@ -63,11 +72,7 @@ function builtinRead(x) {
     return Sk.builtinFiles["files"][x];
 }
 
-// Here's everything you need to run a python program in skulpt
-// grab the code from your textarea
-// get a reference to your pre element for output
-// configure the output function
-// call Sk.importMainWithBody()
+// This is the function that gets called when the user clicks the run button
 function runit() {
 var prog = document.getElementById("yourcode").value;
 var mypre = document.getElementById("output");
