@@ -6,9 +6,11 @@
     --gree-color: #A2BF00;
     --green-color: #AEB684;
     --yellow-color: #F5D25C;
+    --green-og-color: #476d20ca;
 }
 
 body {
+    margin: 0;
     font-size: 1rem;
     font-family: 'mulish';
     background-color: #F9FBFF;
@@ -68,7 +70,7 @@ a {
 
 button {
     color: white;
-    background-color: var(--orange-color);
+    background-color: var(--green-og-color);
     padding: .5em 1.6em;
     border-radius: 50px;
     border: 0;
@@ -94,8 +96,18 @@ button {
 }
 
 .span-green {
-    color: var(--gree-color);
+    color: #476d20ca;
 }
+
+.span-yellow {
+    color: #e5c50e;
+}
+
+.main-content {
+    padding: 1px;
+}
+
+
 
 .main-content p {
     font-size: 1rem;
@@ -122,9 +134,15 @@ button {
 
 /* layout */
 .header {
+    border: 2px solid rgba(128, 128, 128, 0.589);
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    /* justify-content: space-between; */
+    background-color: #abc5cd24;
+    background-color: #ced3d50e;
+    margin: 0px auto;
+    border-radius: 4px;
 }
 
 .navs {
@@ -137,12 +155,16 @@ button {
 
 .nav-links li {
     margin-left: 1.2em;
-    font-size: .9em;
+    /* font-size: .9em; */
+    font-size: 16px;
+    font-weight: 600;
 }
 
 
 .btn {
-    background-color: var(--orange-color);
+    /* background-color: var(--orange-color); */
+    /* background-color: #A2BF00; */
+    background-color: var(--green-og-color);
     color: white;
     padding: .6em 1.5em;
     border-radius: 50px;
@@ -191,3 +213,89 @@ button {
 nav > ul > li > a:hover {
     color: var(--orange-color);
 }
+
+
+
+/* resizing pages to 1000px */
+.main-col {
+    max-width: 1100px;
+    margin: 0px auto;
+}
+
+
+/* repositioning home  image*/
+body > div:nth-child(2) > div > div.right-banner > img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* dropdown and user menu */
+.user-menu {
+  position: relative;
+  display: inline-block;
+  font-family: 'mulish', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-menu p {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.user-menu p:hover {
+  background-color: #e0e0e0;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0;
+  z-index: 1000;
+  width: 150px;
+}
+
+.dropdown li {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown li:last-child {
+  border-bottom: none;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown li a:hover {
+  background-color: #f9f9f9;
+}
+
+.hidden {
+  display: none;
+}
+
+/* resizing main content */
+/* body > div:nth-child(2) > div > div.main-content * {
+    margin-left: auto;
+    margin-right: auto;
+} */

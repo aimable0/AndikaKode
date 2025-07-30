@@ -1,4 +1,5 @@
 .dashboard-grid {
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 4px;
@@ -184,7 +185,7 @@
 
 
 /* resizing */
-.dashboard-grid {
-    max-width: 1000px;
+/* .dashboard-grid {
+
     margin: 0px auto;
-}
+} */

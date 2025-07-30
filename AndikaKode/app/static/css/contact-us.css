@@ -12,7 +12,8 @@ body {
     background-color: var(--white-grey);
     padding-bottom: 2em;
     padding-top: 1em;
-    color: var(--primary-blck);
+    /* color: var(--primary-blck); */
+    color: #476d20ca;
 }
 
 .contact-us-hero h4 {
@@ -129,7 +130,7 @@ body {
     max-width: 1000px;
 }
 #contact-us-btn {
-    background-color: #525252;
+    background-color: #476d20ca;
 }
 
 /* fitting the about us section */
