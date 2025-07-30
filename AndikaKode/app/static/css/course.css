@@ -80,21 +80,23 @@ body {
 #yourcode {
     background-color: rgba(7, 3, 31, 0.887);
     color: wheat;
+    height: 300px;
 }
 
 textarea {
-    height: 400px;
+    height: 300px;
     width: 400px;
     margin-bottom: 0;
     font-size: 18px;
+    border: 8px solid grey;
 }
 
 #output {
     background-color: rgb(184, 190, 184);
-    min-height: 400px;
+    min-height: 300px;
     max-height: fit-content;
     width: 400px;
-    border: 4px solid gray;
+    border: 8px solid gray;
     color: black;
     font-size: 18px;
 }

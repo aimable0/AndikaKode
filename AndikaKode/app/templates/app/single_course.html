@@ -1,0 +1,94 @@
+{% extends './layout.html' %}
+{% block body %}
+    <div class="container">
+        <div class="course-main-content">
+            <h1 id="course-title"><span class="span-orange">chapter 1</span>: Introduction to python & Printstatetement</h1>
+            <!-- <img id="course-img" src="img/course-play.png" alt=""> -->
+
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                <iframe
+                    src="https://www.youtube.com/embed/bdUqQidffPE?rel=0"
+                    frameborder="0"
+                    allowfullscreen
+                    style="position:absolute; top:0; left:0; width:100%; height:100%;">
+                </iframe>
+            </div>
+            <div class="row-course-data">
+                <p class="course-intro">1. Introduction to Python</p>
+                <ul class="course-data">
+                    <li>Goal: Understand what python is and how to write basic code</li>
+                    <li>concepts: print(), strings, simple text output</li>
+                    <li>Activity: print their name, favorite color, or a funny sentence</li>
+                </ul>
+            </div>
+        </div>
+        <div class="practice-section">
+            <h2 class="time-to">Time to practice!</h2>
+
+            <div class="row-course-data">
+                <p>Let'ts print our favorite pet</p>
+                <ul>
+                    :) Using the knowledge you just learnt try and do the exercise above in the code box below.
+                </ul>
+            </div>
+        </div>
+
+        <!-- kode and output -->
+        <div id="kode-and-output">
+            <div class="kode-div">
+                <h3>Kode</h3>
+                <form>
+                    <textarea id="yourcode" cols="40" rows="10"></textarea><br>
+                    <button id="kode-run" type="button" onclick="runit()">Run</button>
+                </form>
+            </div>
+            <div class="output-div">
+                <h3>Output</h3>
+                <pre id="output"></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- BEGINING skulpt -->
+<script type="text/javascript">
+// output functions are configurable.  This one just appends some text
+// to a pre element.
+function outf(text) {
+    var mypre = document.getElementById("output");
+    mypre.innerHTML = mypre.innerHTML + text;
+}
+function builtinRead(x) {
+    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+            throw "File not found: '" + x + "'";
+    return Sk.builtinFiles["files"][x];
+}
+
+// Here's everything you need to run a python program in skulpt
+// grab the code from your textarea
+// get a reference to your pre element for output
+// configure the output function
+// call Sk.importMainWithBody()
+function runit() {
+var prog = document.getElementById("yourcode").value;
+var mypre = document.getElementById("output");
+mypre.innerHTML = '';
+Sk.pre = "output";
+Sk.configure({output:outf, read:builtinRead});
+(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+var myPromise = Sk.misceval.asyncToPromise(function() {
+    return Sk.importMainWithBody("<stdin>", false, prog, true);
+});
+myPromise.then(function(mod) {
+    console.log('success');
+},
+    function(err) {
+    console.log(err.toString());
+});
+}
+</script>
+
+    <!-- include a graphic canvas -->
+    <div id="mycanvas"></div>
+
+    <!-- skulpt -->
+{% endblock %}

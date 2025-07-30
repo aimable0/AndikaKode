@@ -5,7 +5,7 @@
 .login-section {
     position: relative;
     height: 100px;
-    background-image: url(../images/hero-background.jpg);
+    background-image: url(../img/andikabg-02.webp);
     background-size:cover;
     background-position: right;
     background-repeat: no-repeat;
@@ -18,7 +18,7 @@
     left: 0;
     width: 100%; /* Make it full width */
     height: 100%; /* Match .hero height */
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
 nav,
@@ -30,16 +30,16 @@ nav,
 nav h1 {
     padding-top: 15px;
     padding-left: 15px;
-    font-family: 'outfit';
+    font-family: 'mulish', sans-serif;
     font-size: 14px;
     color: white;
 }
 .login-inputs {
     width: 90%;
-    font-family: 'poppins';
+    font-family: 'mulish', sans-serif;
     border: 1px solid black;
     text-align: center;
-    background-color: #1d1a1ad3;
+    background-color: #08A5D4;
     border-radius: 10px;
     border: 0;
     margin-left: auto;
@@ -62,21 +62,21 @@ nav h1 {
 }
 .login-inputs form div input {
     outline: none;
-    font-family: 'poppins';
-    font-size: 12px;
+    font-family: 'mulish', sans-serif;
+    font-size: 16px;
     width: 220px;
     padding: 6px 10px;
     margin-bottom: 25px;
     background-color: transparent;
     outline: none;
-    border: 1px solid grey;
+    border: 1px solid rgb(243, 243, 243);
     color: white;
 }
 
 #submit-log-in {
     color: white;
     border: 0;
-    background-color: #b25305;
+    background-color: #8b827a;
     /* background-color: #C26E27; */ /* alternative*/
     border-radius: 4px;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
@@ -85,8 +85,14 @@ nav h1 {
     font-weight: 600;
     font-size: 14px;
 }
+
+#submit-log-in:hover,
+#submit-log-in:focus {
+    background-color: #FE602F;
+}
+
 input::placeholder {
-    color: #c2c2c2;
+    color: #e0e0e0;
     font-size: 12px;
     opacity: 1;
 }
@@ -113,13 +119,14 @@ form > p a {
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-family: 'roboto';
-    background-color: #242424;
-    color: #AFA9A9;
+    font-family: 'mulish', sans-serif;
+    background-color: #08A5D4;
+    color: #ffffff;
     text-align: center;
     font-size: 14px;
     padding: 15px 0px;
     letter-spacing: 0.4px;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 765px) {

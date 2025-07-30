@@ -41,7 +41,7 @@ def loginPage(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect("app/home.html")
+            return redirect(reverse('andikakode:home'))
         else:
             messages.info(request, 'Username or Password is incorrect')
             return render(request, "app/login.html")

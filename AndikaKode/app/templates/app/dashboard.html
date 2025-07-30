@@ -1,0 +1,86 @@
+{% extends "./layout.html" %}
+{% load static %}
+{% block body %}
+<div class="container">
+    <div class="dashboard-grid">
+        <div class="profile">
+            <p class="user-name"><span id="hi">Hi</span> Brian!</p>
+            <img id="name-underline" src="img/underlines/name-underline.svg" alt="">
+            <img src="img/avatar-1.png" alt="">
+            <p id="ready-to-code">Ready to code today?</p>
+            <button id="yes-btn">yes</button>
+            <p>current streak /<span>Days</span></p>
+            <div class="streak-circles">
+                <div class="streak-circle">1</div>
+                <img src="img/Arrow.svg" alt="">
+                <div class="streak-circle">2</div>
+                <img src="img/Arrow.svg" alt="">
+                <div class="streak-circle">3</div>
+                <img src="img/Arrow.svg" alt="">
+                <div class="streak-circle">4</div>
+                <img src="img/Arrow.svg" alt="">
+                <div class="streak-circle">5</div>
+            </div>
+        </div>
+        <div class="progress-content">
+            <h1>Here's your road to becoming a Python programmer</h1>
+            <img id="road-underline" src="img/underlines/main-underline.svg" alt="">
+            <div class="chapters">
+                <div class="chapter">
+                    <div class="stars">
+                        <img src="img/star/full-star.svg" alt="">
+                        <img src="img/star/full-star.svg" alt="">
+                        <img src="img/star/full-star.svg" alt="">
+                    </div>
+                    <div class="chapter-number greeny">
+                        <p>1</p>
+                    </div>
+                    <div class="chapter-completion-rate">
+                        <p>chapter 1: 55%</p>
+                    </div>
+                </div>
+                <div class="chapter">
+                    <div class="stars">
+                        <img src="img/star/full-star.svg" alt="">
+                        <img src="img/star/full-star.svg" alt="">
+                        <img src="img/star/empty-star.svg" alt="">
+                    </div>
+                    <div class="chapter-number orange">
+                        <p>2</p>
+                    </div>
+                    <div class="chapter-completion-rate">
+                        <p>chapter 2: 60%</p>
+                    </div>
+                </div>
+                <div class="chapter">
+                    <div class="stars">
+                        <img src="img/star/empty-star.svg" alt="">
+                        <img src="img/star/empty-star.svg" alt="">
+                        <img src="img/star/empty-star.svg" alt="">
+                    </div>
+                    <div class="chapter-number yellow">
+                        <p>3</p>
+                    </div>
+                    <div class="chapter-completion-rate">
+                        <p>chapter 3: 0%</p>
+                    </div>
+                </div>
+                <div class="chapter">
+                    <div class="stars">
+                        <img src="img/star/empty-star.svg" alt="">
+                        <img src="img/star/empty-star.svg" alt="">
+                        <img src="img/star/empty-star.svg" alt="">
+                    </div>
+                    <div class="chapter-number grey">
+                        <p>4</p>
+                    </div>
+                    <div class="chapter-completion-rate">
+                        <p>chapter 4: 5%</p>
+                    </div>
+                </div>
+            </div>
+            <button id="continue-coding">Continue coding</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
