@@ -17,9 +17,17 @@
 
 /* grid styles */
 .courses{
+    /* max-width: 1000px; */
     grid-column: 1 / -1;
+}
+
+.courses-container {
+    max-width: 1000px;
+    /* grid-column: 1 / -1; */
+    margin: 0px auto;
 }
 
 .courses h1 {
     text-align: center;
+    color: #476d20ca;
 }

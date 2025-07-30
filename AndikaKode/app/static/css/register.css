@@ -47,6 +47,7 @@ nav h1 {
     margin-top: 100px;
     padding: 5px;
 }
+
 .login-inputs form div h2 {
     font-family: inherit;
     margin-top: 40px;
@@ -139,4 +140,8 @@ form > p a {
         letter-spacing: 1px;
     }
 
+}
+
+.form-control {
+    border-radius: 5px;
 }

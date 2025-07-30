@@ -68,7 +68,7 @@ a {
 
 button {
     color: white;
-    background-color: var(--orange-color);
+    background-color: #476d20ca;
     padding: .5em 1.6em;
     border-radius: 50px;
     border: 0;
@@ -94,7 +94,7 @@ button {
 }
 
 .span-green {
-    color: var(--gree-color);
+    color: #476d20ca;
 }
 
 .main-content p {

@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from . import views
 from django.urls import path
 
@@ -11,6 +13,9 @@ urlpatterns = [
     path("dashboard/", views.dashboard, name="dashboard"),
     path("register/", views.registerPage, name="register"),
     path("login/", views.loginPage, name="login"),
+    path("logout/", views.loginPage, name="logout"),
     path("contact/", views.contact, name="contact"),
     path("about/", views.about, name="about"),
 ]
+# to make sure django servers uploaded images in dev mode
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
