@@ -4,7 +4,7 @@
     --primary-blck: #474343;
 }
 body {
-    background-color: #e3e3e3d6;
+    /* background-color: #e3e3e3d6; */
     color: var(--primary-blck);
     font-size: .9rem;
 }
@@ -50,7 +50,7 @@ body {
 
 .who-are-we-par {
     padding: 2em;
-    background-color: #DFDFDF;
+    background-color: #efefefc5;
     color: var(--primary-blck);
 }
 

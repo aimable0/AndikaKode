@@ -2,48 +2,92 @@
 {% block body %}
     <div class="courses-container">
         <div class="course-main-content">
-            <h1 id="course-title"><span class="span-orange">chapter</span>: {{ course.title }}</h1>
-            <p class="course-description">{{ course.description }}</p>
+            {% if course %}
+                <!-- <span class="span-orange">chapter</span>:  -->
+                <h1 id="course-title">{{ course.title }}</h1>
+            {% else %}
+                <h1>Something is wrong no course</h1>
+            {% endif %}
 
             <!-- Embedded Video -->
             <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;" class="course-video">
                 <iframe
-                    src="https://www.youtube.com/embed/bdUqQidffPE?rel=0"
-                    frameborder="0"
-                    allowfullscreen
-                    style="position:absolute; top:0; left:0; width:100%; height:100%;">
+                src="https://www.youtube.com/embed/bdUqQidffPE?rel=0"
+                frameborder="0"
+                allowfullscreen
+                style="position:absolute; top:0; left:0; width:100%; height:100%;">
                 </iframe>
             </div>
 
+            <p class="course-description">{{ course.description }}</p>
+
             <div class="row-course-data">
-                <p class="course-intro">{{ course.title }}</p>
+                <!-- <p class="course-intro">{{ course.title }}</p> -->
                 <!-- Goals -->
-                <!-- <ul class="course-data"> -->
-                <!-- </ul> -->
+                <section class="course-goals">
                     <h2>What You'll Learn</h2>
                     <ul class="course-data">
                         {% for goal in course.goals %}
-                            <li>- {{ goal }}</li>
+                        <li> - {{ goal }}</li>
                         {% endfor %}
                     </ul>
-                    
+                </section>
+
+                <!-- topics -->
+                <section class="course-topics">
+                    <h2>Topics Covered</h2>
+                    <ul class="course-data">
+                        {% for topic in course.topics %}
+                        <li> + {{ topic }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+
+                <!-- Activities -->
+                <section class="course-activities">
+                    <h2>Activities</h2>
+                    <ul>
+                        {% for activity in course.activities %}
+                        <li>🎯 {{ activity }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
             </div>
         </div>
+
+        <!-- Practice session -->
         <div class="practice-section">
             <h2 class="time-to">Time to practice!</h2>
 
             <div class="row-course-data">
-                <p>Let'ts print our favorite pet</p>
-                <ul>
-                    :) Using the knowledge you just learnt try and do the exercise above in the code box below.
+                <p class="course-data-p">Let's get our hands dirty!</p>
+
+                <ul class="course-data">
+                    <p class="course-data-p"> :) Using the knowledge you just learnt try and do the these exercses below:</p>
+                    {% for exercise in course.exercises %}
+                        <li style="color: #FE602F; font-weight: bold;"> > {{ exercise}}</li>
+                    {% endfor %}
                 </ul>
+
+                <p class="course-data-p" style="color: green;">
+                    <b>Instructions:</b>
+                    <ol style="margin-top: 5px;">
+                        <li style="color: green; font-weight: bold; font-size: 16px;">1. Write your code below in the "Kode" Frame</li>
+                        <li style="color: green; font-weight: bold; font-size: 16px;">2. Check if you made no errors 🙂</li>
+                        <li style="color: green; font-weight: bold; font-size: 16px;">3. Click the round green "Run" button</li>
+                        <li style="color: green; font-weight: bold; font-size: 16px;">4. You should see your expected output in the "Output" Frame (green)</li>
+                        <li style="color: green; font-weight: bold; font-size: 16px;">5. If it fails (and you dont' see anything), -don't worry! just go back to step 1 and try again 🙂</li>
+                        <li style="color: rgb(114, 120, 114); font-weight: bold; font-size: 16px;">Good news: I will soon introduce a mechanims to help you... sounds great, right ?</li>
+
+                    </ol>
+                </p>
+
             </div>
         </div>
 
-
-    
         <!-- kode and output -->
         <div id="kode-and-output">
+
             <div class="kode-div">
                 <h3>Kode</h3>
                 <form>
@@ -57,6 +101,10 @@
             </div>
         </div>
     </div>
+
+
+    <!-- marks complete and next course -->
+
 
     <!-- BEGINING skulpt -->
 <script type="text/javascript">

@@ -8,32 +8,14 @@
             </div>
 
             <div class="all-courses courses-grid">
-                <div class="course">
-                    <a href="{% url 'andikakode:course' %}">
-                        <img src="{% static 'img/course_cards/course_cover_s2.png' %}" alt="">
-                    </a>
-                    <p>Introduction to Python</p>
-                </div>
-                <div class="course">
-                    <img src="{% static 'img/course_cards/course_cover_s2.png' %}" alt="">
-                    <p>Introduction to Print Statements</p>
-                </div>
-                <div class="course">
-                    <img src="{% static 'img/course_cards/course_cover_s2.png' %}" alt="">
-                    <p>Introduction to Print Statements</p>
-                </div>
-                <div class="course">
-                    <img src="{% static 'img/course_cards/course_cover_s2.png' %}" alt="">
-                    <p>Introduction to loops and conditionals</p>
-                </div>
-                <div class="course">
-                    <img src="{% static 'img/course_cards/course_cover_s2.png' %}" alt="">
-                    <p>Introduction to User inputs</p>
-                </div>
-                <div class="course">
-                    <img src="{% static 'img/course_cards/course_cover_s2.png' %}" alt="">
-                    <p>Introduction to Print Statements</p>
-                </div>
+                {% for course in courses %}
+                    <div class="course">
+                        <a href="{% url 'andikakode:course' course.id %}">
+                            <img src="{{ course.course_card.url }}" alt="{{ course.title }}">
+                        </a>
+                        <p>{{ course.title }}</p>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

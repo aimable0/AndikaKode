@@ -4,12 +4,12 @@
     --primary-blck: #474343;
 }
 
-body {
+/* body {
     background-color: #e3e3e3d6;
-}
+} */
 
 .contact-us-hero {
-    background-color: var(--white-grey);
+    /* background-color: var(--white-grey); */
     padding-bottom: 2em;
     padding-top: 1em;
     /* color: var(--primary-blck); */
@@ -48,14 +48,14 @@ body {
     font-size: .9rem;
     border-radius: 5px;
     border: 1px solid rgb(173, 173, 173);
-    background-color: #e3e3e3d6;
+    background-color: #efefefc5;
     width: 300px;
 }
 
 .contact-us-form textarea {
     font-size: .9rem;
-    font-family: 'poppins';
-    background-color: #e3e3e3d6;
+    font-family: 'mulish', sans-serif;
+    background-color: #efefefc5;
     padding: 1em;
     border-radius: 5px;
     border: 1px solid rgb(173, 173, 173);
@@ -90,7 +90,8 @@ body {
 }
 
 .address-box {
-    background-color: #DFDFDF;
+    /* background-color: #DFDFDF; */
+    background-color: #efefefc5;
     padding: 2em;
     height: min-content;
 }

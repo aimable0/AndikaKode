@@ -4,12 +4,13 @@ from . import views
 from django.urls import path
 
 # path name here
-app_name = 'andikakode'
+app_name = "andikakode"
 
 urlpatterns = [
-    path("", views.home, name='home'),
-    path("courses/", views.courses, name='courses'),
-    path("course/", views.course, name='course'),
+    path("", views.home, name="home"),
+    path("courses/", views.courses, name="courses"),
+    # path("course/<>", views.course, name="course"),
+    path('course/<uuid:id>/', views.course, name='course'),
     path("dashboard/", views.dashboard, name="dashboard"),
     path("register/", views.registerPage, name="register"),
     path("login/", views.loginPage, name="login"),
@@ -17,5 +18,7 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("about/", views.about, name="about"),
 ]
+
 # to make sure django servers uploaded images in dev mode
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
