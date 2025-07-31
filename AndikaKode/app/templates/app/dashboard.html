@@ -8,7 +8,7 @@
             <img id="name-underline" src="{% static 'img/underlines/name-underline.svg' %}" alt="">
             <img src="{% static 'img/avatar-1.png' %}" class="avatar" alt="">
             <p id="ready-to-code">Ready to code today?</p>
-            <button id="yes-btn" class="transit">yes</button>
+            <button id="yes-btn" class="transit"><a style="color: #fff;" href="{% url 'andikakode:courses' %}">yes</a></button>
             <p>current streak /<span>Days</span></p>
             <div class="streak-circles">
                 <div class="streak-circle">1</div>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="progress-content">
-            <h1>Hey, Python Superstar, here's your wall of fame!</h1>
+            <h1 style="letter-spacing: .75px;">Hey, Python Superstar, here's your wall of fame!</h1>
             <img id="road-underline" src="{% static 'img/underlines/main-underline.svg' %}" alt="">
             <div class="chapters">
                 <div class="chapters">
@@ -62,7 +62,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <button id="continue-coding" class="transit">Continue coding</button>
+            <button id="continue-coding" class="transit"><a  style="color: #C52F00; " href="{% url 'andikakode:courses' %}">Continue coding</a></button>
         </div>
     </div>
 </div>
