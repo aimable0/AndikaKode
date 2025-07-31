@@ -9,7 +9,7 @@
             <div class="main-content">
                 <h1 class="dive"><span class="span-orange">dive</span> into the <span class="span-yellow">greatness</span> of <span class="span-green">learning</span> <span class="span-blue">python</span></h1>
                 <p class="home-para-intro">Online educational platform for digital skills where students aged between 6-17 makes their dreams come true by designing real projects</p>
-                <button>Start Coding </button>
+                <button class="btn" id="explore-now-btn" style="background-color: #476d20ca;"><a href="{% url 'andikakode:register' %}">Get Started</a></button>
                 <div class="aside-content">
                     <div class="kids-circle-area"></div>
                     <div class="join-creators">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <div class="right-banner">
+            <div class="right-banner zoom-on-load">
                 <img src="{% static 'img/Right-banner-HD.png' %}" alt="">
             </div>
         </div>
@@ -35,7 +35,7 @@
                     <h3><span>QUICKLY <span class="span-yellow">MASTER</span></span><br><span class="span-blue">Python</span> concepts</h3>
                     <h2 class="built-with-title"><span class="span-blue">Built-in</span> is the most <br> <span>reliable <span class="span-green">Code Editor</span></span></h2>
                     <p>Online educational platform for digital skills where students <br> make their dreams come true.</p>
-                    <button class="btn" id="explore-now-btn">Explore now</button>
+                    <button class="btn" id="explore-now-btn"><a href="{% url 'andikakode:courses' %}">Explore Courses</a></button>
                 </div>
             </div>
         </div>
@@ -57,4 +57,17 @@
             </div>
         </div>
     </div>
+    <script>
+        window.addEventListener('load', function () {
+            const image = document.querySelector('.right-banner img');
+            if (image) {
+            image.classList.add('zoom-on-load');
+
+            // Optional: remove the class after animation so hover still works smoothly
+            setTimeout(() => {
+                image.classList.remove('zoom-on-load');
+            }, 800); // match animation duration
+            }
+        });
+    </script>
 {% endblock %}

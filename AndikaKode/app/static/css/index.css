@@ -181,20 +181,27 @@ button {
     background-repeat: no-repeat;
     width: 100%;
     background-size: contain;
+    transition: .4s;
 }
 
+.kids-circle-area:hover {
+    transform: scale(1.15);
+}
 /* right banner */
 .right-banner img{
     max-width: 450px;
     min-width: 300px;
     width: 100%;
+    transition: 1s;
 }
 
+.right-banner img:hover {
+    transform: scale(1.2);
+}
 /* more styles */
 .home-para-intro {
     padding-right: 50px;
 }
-
 
 
 /* footer */
@@ -321,7 +328,13 @@ body > div:nth-child(2) > div > div.right-banner > img {
 
 .three-d-content img {
     max-width: 400px;
+    transition: .4s;
 }
+
+.three-d-content img:hover {
+    transform: scale(1.2);
+}
+
 .three-d-text {
     display: flex;
     justify-content: center;
@@ -343,6 +356,11 @@ body > div:nth-child(2) > div > div.right-banner > img {
     letter-spacing: 1px;
     max-width: 300px;
     font-size: 15px;
+    transition: .3s;
+}
+
+#explore-now-btn:hover {
+    transform: scale(1.2);
 }
 
 .built-with-title {
@@ -361,7 +379,7 @@ body > div:nth-child(2) > div > div.right-banner > img {
     font-size: 16px;
 }
 
-/* newsletter */
+/* NEWSLETTER */
 .join-newsletter {
     grid-column: 1/-1;
 }
@@ -446,4 +464,34 @@ input::placeholder {
         font-size: 1rem;
     }
 
+}
+
+/* animation effects */
+/* .zoom-on-load {
+  animation: zoomInOnce 0.8s ease-in-out forwards;
+}
+
+@keyframes zoomInOnce {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+} */
+
+.zoom-on-load {
+  animation: zoomInAndBack 1.2s ease-in-out forwards;
+}
+
+@keyframes zoomInAndBack {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

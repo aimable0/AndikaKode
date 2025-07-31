@@ -4,11 +4,11 @@
 <div class="container">
     <div class="dashboard-grid">
         <div class="profile">
-            <p class="user-name"><span id="hi">Hi {{ user.username }}</span>!</p>
+            <p class="user-name zoom-on-load"><span id="hi">Hi {{ user.username }}</span>!</p>
             <img id="name-underline" src="{% static 'img/underlines/name-underline.svg' %}" alt="">
-            <img src="{% static 'img/avatar-1.png' %}" alt="">
+            <img src="{% static 'img/avatar-1.png' %}" class="avatar" alt="">
             <p id="ready-to-code">Ready to code today?</p>
-            <button id="yes-btn">yes</button>
+            <button id="yes-btn" class="transit">yes</button>
             <p>current streak /<span>Days</span></p>
             <div class="streak-circles">
                 <div class="streak-circle">1</div>
@@ -26,7 +26,7 @@
             <h1>Here's your road to becoming a Python programmer</h1>
             <img id="road-underline" src="{% static 'img/underlines/main-underline.svg' %}" alt="">
             <div class="chapters">
-                <div class="chapter">
+                <div class="chapter transit">
                     <div class="stars">
                         <img src="{% static 'img/star/empty-star.svg' %}" alt="">
                         <img src="{% static 'img/star/empty-star.svg' %}" alt="">
@@ -39,7 +39,7 @@
                         <p>chapter 1: 0%</p>
                     </div>
                 </div>
-                <div class="chapter">
+                <div class="chapter transit">
                     <div class="stars">
                         <img src="{% static 'img/star/empty-star.svg' %}" alt="">
                         <img src="{% static 'img/star/empty-star.svg' %}" alt="">
@@ -52,7 +52,7 @@
                         <p>chapter 2: 0%</p>
                     </div>
                 </div>
-                <div class="chapter">
+                <div class="chapter transit">
                     <div class="stars">
                         <img src="{% static 'img/star/empty-star.svg' %}" alt="">
                         <img src="{% static 'img/star/empty-star.svg' %}" alt="">
@@ -65,7 +65,7 @@
                         <p>chapter 3: 0%</p>
                     </div>
                 </div>
-                <div class="chapter">
+                <div class="chapter transit">
                     <div class="stars">
                         <img src="{% static 'img/star/empty-star.svg' %}" alt="">
                         <img src="{% static 'img/star/empty-star.svg' %}" alt="">
@@ -79,7 +79,7 @@
                     </div>
                 </div>
             </div>
-            <button id="continue-coding">Continue coding</button>
+            <button id="continue-coding" class="transit">Continue coding</button>
         </div>
     </div>
 </div>

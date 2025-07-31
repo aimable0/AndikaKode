@@ -189,3 +189,19 @@
 
     margin: 0px auto;
 } */
+
+/* animations */
+.avatar {
+    transition: 0.8s;
+}
+.avatar:hover {
+    transform: scale(1.2);
+}
+
+.transit {
+    transition: 0.8s;
+}
+
+.transit:hover {
+    transform: scale(1.2);
+}

@@ -114,6 +114,15 @@ textarea {
     font-family: inherit;
 }
 
+#kode-run:hover,
+#kode-run:focus {
+    background-color: #ebcb12fa;
+    color: green;
+    font-weight: 500;
+    transform: scale(1.1);
+    transition: .05s;
+}
+
 #kode-and-output{
     display: flex;
 }
@@ -162,4 +171,21 @@ textarea {
 
 .course-data-p {
     font-size: 16px;
+}
+
+/* mark complete */
+#btn-complete{
+    display: block;
+    margin: 2em auto;
+    padding: 1em 2em;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color:#c0b4a547;
+    color: green;
+    font-weight: bold;
+}
+
+#btn-complete:hover {
+    background-color: green;
+    color: white;
 }

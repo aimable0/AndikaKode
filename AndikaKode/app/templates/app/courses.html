@@ -9,7 +9,7 @@
 
             <div class="all-courses courses-grid">
                 {% for course in courses %}
-                    <div class="course">
+                    <div class="course transit">
                         <a href="{% url 'andikakode:course' course.id %}">
                             <img src="{{ course.course_card.url }}" alt="{{ course.title }}">
                         </a>

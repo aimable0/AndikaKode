@@ -109,8 +109,14 @@
                 <pre id="output"></pre>
             </div>
         </div>
-    </div>
 
+        <div class="mark-complete">
+            <form method="post" action="">
+                {% csrf_token %}
+                <button id="btn-complete">Mark as Completed  ✅</button>
+            </form>
+        </div>
+    </div>
 
     <!-- marks complete and next course -->
 

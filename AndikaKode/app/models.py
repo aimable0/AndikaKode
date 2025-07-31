@@ -30,3 +30,4 @@ class Course(models.Model):
 
     def get_video(self):
         return f"Watch the course video here: {self.video_link}"
+
