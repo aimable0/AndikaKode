@@ -33,12 +33,12 @@
 .chapters {
     display: grid;
     grid-template-areas:
-    "c1 . c3 ."
-    "c1 . c3 ."
-    "c1 . c3 ."
-    ". c2 . c4"
-    ". c2 . c4"
-    ". c2 . c4";
+    "c1 . c3 . c5 ."
+    "c1 . c3 . c5 ."
+    "c1 . c3 . c5 ."
+    ". c2 . c4 . c6"
+    ". c2 . c4 . c6"
+    ". c2 . c4 . c6";
 }
 
 .chapter-completion-rate > p {
@@ -59,11 +59,37 @@
 .chapter:nth-child(2) {
     grid-area: c2;
 }
+
+.chapter:nth-child(2) .chapter-number {
+    background-color: #EA420E;
+}
+
 .chapter:nth-child(3) {
     grid-area: c3;
 }
+.chapter:nth-child(3) .chapter-number {
+    background-color: #F6D824;
+}
+
+
 .chapter:nth-child(4) {
     grid-area: c4;
+}
+.chapter:nth-child(4) .chapter-number {
+    background-color: #000000ad;
+}
+
+.chapter:nth-child(5) {
+    grid-area: c5;
+}
+.chapter:nth-child(5) .chapter-number {
+    background-color: #AEB684;
+}
+.chapter:nth-child(6) {
+    grid-area: c6;
+}
+.chapter:nth-child(6) .chapter-number {
+    background-color: #08A5D4;
 }
 
 .chapter-number {

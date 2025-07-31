@@ -84,17 +84,30 @@ def logoutUser(request):
 
 def dashboard(request):
     user = request.user
-    courses = Course.objects.all()
-    progress_data = {
-        progress.course.id: progress.is_completed
-        for progress in UserCourseProgress.objects.filter(user=user)
-    }
+    courses = Course.objects.all().order_by('chapter')  # <- Order by chapter
+    progress_data = UserCourseProgress.objects.filter(user=user)
 
-    return render(request, "app/dashboard.html", {
-        "user": user,
-        "courses": courses,
-        "progress_data": progress_data,
+    progress_dict = {progress.course.id: progress for progress in progress_data}
+
+    return render(request, 'app/dashboard.html', {
+        'courses': courses,
+        'progress_data': progress_dict
     })
+
+
+
+    # user = request.user
+    # courses = Course.objects.all()
+    # progress_data = {
+    #     progress.course.id: progress.is_completed
+    #     for progress in UserCourseProgress.objects.filter(user=user)
+    # }
+
+    # return render(request, "app/dashboard.html", {
+    #     "user": user,
+    #     "courses": courses,
+    #     "progress_data": progress_data,
+    # })
 
     # return render(request, "app/dashboard.html")
 

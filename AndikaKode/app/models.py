@@ -15,6 +15,7 @@ class Course(models.Model):
     topics = models.JSONField(default=list, blank=True)
     exercises = models.JSONField(default=list, blank=True)
     activities = models.JSONField(default=list, blank=True)
+    chapter = models.IntegerField(default=1)
 
     def __str__(self):
         return self.title
