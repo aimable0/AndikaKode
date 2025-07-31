@@ -110,12 +110,23 @@
             </div>
         </div>
 
-        <div class="mark-complete">
+        <!-- <div class="mark-complete">
             <form method="post" action="{% url 'andikakode:mark_course_complete' course.id %}">
                 {% csrf_token %}
                 <button id="btn-complete">Mark as Completed  ✅</button>
             </form>
+        </div> -->
+
+        <div class="mark-complete">
+            <form method="post" action="{% url 'andikakode:mark_course_complete' course.id %}">
+                {% csrf_token %}
+                <button id="btn-complete"
+                    {% if not user.is_authenticated %} disabled style="opacity: 0.6; cursor: not-allowed;" title="Login to mark as completed" {% endif %}>
+                    Mark as Completed ✅
+                </button>
+            </form>
         </div>
+
     </div>
 
     <!-- marks complete and next course -->

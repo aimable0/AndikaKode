@@ -43,13 +43,19 @@
                     <!-- <li class="btn get-started"><a href="{% url 'andikakode:dashboard' %}">Dashboard</a></li> -->
                 </ul>
                 <div class="user-menu">
-                    <div class="user-name">
-                        <p>Hi, {{ user.username|capfirst }} ▼</p>
-                    </div>
-                    <ul class="dropdown hidden">
-                        <li><a href="{% url 'andikakode:dashboard' %}">Dashboard</a></li>
-                        <li><a href="{% url 'andikakode:logout' %}">Logout</a></li>
-                    </ul>
+                    {% if user.is_authenticated %}
+                        <div class="user-name">
+                            <p>Hi, {{ user.username|capfirst }} ▼</p>
+                        </div>
+                        <ul class="dropdown hidden">
+                            <li><a href="{% url 'andikakode:dashboard' %}">Dashboard</a></li>
+                            <li><a href="{% url 'andikakode:logout' %}">Logout</a></li>
+                        </ul>
+                    {% else %}
+                        <div class="user-name" style="border: 2px solid rgb(207, 167, 20); padding: 5px 15px;">
+                            <a href="{% url 'andikakode:login' %}">Login</a>
+                        </div>
+                    {% endif %}
                 </div>
             </nav>
         </div>

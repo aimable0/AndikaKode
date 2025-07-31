@@ -7,7 +7,7 @@ from django.urls import reverse
 from .models import Course
 from django.utils import timezone
 from .models import UserCourseProgress
-
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from uuid import UUID
 
@@ -120,6 +120,7 @@ def contact(request):
 
 
 # dealing with courses
+@login_required
 def mark_course_complete(request, course_id):
     # course = get_object_or_404(Course, id=course_id)
     # user = request.user
