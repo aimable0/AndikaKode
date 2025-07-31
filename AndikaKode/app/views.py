@@ -60,7 +60,6 @@ def registerPage(request):
 
 
 def loginPage(request):
-
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
@@ -122,17 +121,35 @@ def contact(request):
 
 # dealing with courses
 def mark_course_complete(request, course_id):
+    # course = get_object_or_404(Course, id=course_id)
+    # user = request.user
+
+    # # Mark as completed
+    # progress, created = UserCourseProgress.objects.get_or_create(user=user, course=course)
+    # progress.is_completed = True
+    # progress.completed_at = timezone.now()
+    # progress.save()
+
+    # # Get the next course (based on ID ordering)
+    # next_course = Course.objects.filter(id__gt=course.id).order_by('id').first()
+
+    # if next_course:
+    #     return redirect('andikakode:course', next_course.id)
+    # else:
+    #     return redirect('andikakode:dashboard')
+
+
     course = get_object_or_404(Course, id=course_id)
     user = request.user
 
-    # Mark as completed
+    # Mark the course as completed
     progress, created = UserCourseProgress.objects.get_or_create(user=user, course=course)
     progress.is_completed = True
     progress.completed_at = timezone.now()
     progress.save()
 
-    # Get the next course (based on ID ordering)
-    next_course = Course.objects.filter(id__gt=course.id).order_by('id').first()
+    # Get the next course by chapter
+    next_course = Course.objects.filter(chapter__gt=course.chapter).order_by('chapter').first()
 
     if next_course:
         return redirect('andikakode:course', next_course.id)

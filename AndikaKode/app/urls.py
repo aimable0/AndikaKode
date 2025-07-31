@@ -17,6 +17,7 @@ urlpatterns = [
     path("logout/", views.loginPage, name="logout"),
     path("contact/", views.contact, name="contact"),
     path("about/", views.about, name="about"),
+    path('mark-course-complete/<uuid:course_id>/', views.mark_course_complete, name='mark_course_complete'),
 ]
 
 # to make sure django servers uploaded images in dev mode
