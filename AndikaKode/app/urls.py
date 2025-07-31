@@ -2,12 +2,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from . import views
 from django.urls import path
+from django.shortcuts import redirect
+from django.contrib import admin
 
 # path name here
 app_name = "andikakode"
 
 urlpatterns = [
-    path("", views.home, name="home"),
+    path("", views.loginPage, name="login"),
+    path("home/", views.home, name="home"),
     path("courses/", views.courses, name="courses"),
     # path("course/<>", views.course, name="course"),
     path('course/<uuid:id>/', views.course, name='course'),
