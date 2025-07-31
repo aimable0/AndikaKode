@@ -299,3 +299,151 @@ body > div:nth-child(2) > div > div.right-banner > img {
     margin-left: auto;
     margin-right: auto;
 } */
+
+
+.content {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+/* working with other sections of home */
+.td-illustrations {
+    grid-column: 1/-1;
+    /* max-width: 1200px; */
+}
+
+.three-d-content {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+.three-d-content img {
+    max-width: 400px;
+}
+.three-d-text {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+.three-d-text h3 {
+    font-family: 'atma', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#explore-now-btn {
+    background-color: #08A5D4;
+    color: rgb(255, 213, 0);
+    font-weight: bold;
+    letter-spacing: 1px;
+    max-width: 300px;
+    font-size: 15px;
+}
+
+.built-with-title {
+    font-family: 'atma', 'muish', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-transform: capitalize;
+    margin: 0px;
+    letter-spacing: 1px;
+}
+
+
+.join-newsletter p,
+.td-illustrations p {
+    font-size: 16px;
+}
+
+/* newsletter */
+.join-newsletter {
+    grid-column: 1/-1;
+}
+.join-newsletter {
+    color: white;
+    padding: 2em 2em 4em 2em;
+    background: linear-gradient(to right, #08A5D4 20%, #C9732C 100%);
+}
+
+.join-newsletter h2 {
+    font-size: 2em;
+    color: inherit;
+    text-align: center;
+    margin-bottom: 1em;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+@media (max-width: 675px) {
+    .join-newsletter h2 {
+        font-size: 1.4rem;
+    }
+}
+
+.news-letter-info {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 2em;
+}
+
+.subscribe form {
+    border: 1.5px solid #E7DAD0;
+    width: 100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.subscribe form input {
+    border: 0;
+    width: 100%;
+    margin-left: 15px;
+    font-size: inherit;
+    font-family: 'mulish', sans-serif;
+    color:white;
+    background-color: transparent;
+    outline: none;
+}
+input::placeholder {
+    color: #f1f1f1;
+    font-size: inherit;
+    opacity: 1;
+}
+.sub-btn {
+    background-color: white;
+    border: 0;
+    padding: .75em 1.3em;
+    border-radius: 50px;
+    font-family: 'mulish', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#C9732C;
+    font-size: 12px;
+}
+
+@media (min-width:675px) {
+    .subscribe form {
+        width: 60%;
+    }
+
+    .sub-btn {
+        font-size: 1rem;
+    }
+
+    input::placeholder {
+        font-size: 1rem;
+    }
+
+    .subscribe form input {
+        font-size: 1rem;
+    }
+
+}

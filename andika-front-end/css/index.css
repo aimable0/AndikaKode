@@ -191,3 +191,37 @@ button {
 nav > ul > li > a:hover {
     color: var(--orange-color);
 }
+
+.content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* trial of 3d */
+.three-d-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2cm;
+    grid-column: 1 / -1;
+}
+
+.three-d-content img {
+    width: 500px;
+}
+
+.three-d-img-1 {
+    order: 1;
+    width: 60%;
+    margin-bottom: 1em;
+}
+
+.three-d-text {
+    order: 2;
+}
+.three-d-text button {
+    background-color: var(--primary-orange);
+    padding: 1em 1.6em;
+    margin-top: 1.2em;
+    font-weight: 600;
+}

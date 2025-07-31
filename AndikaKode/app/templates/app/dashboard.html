@@ -5,7 +5,7 @@
     <div class="dashboard-grid">
         <div class="profile">
             <p class="user-name"><span id="hi">Hi {{ user.username }}</span>!</p>
-            <img id="name-underline" src="img/underlines/name-underline.svg" alt="">
+            <img id="name-underline" src="{% static 'img/underlines/name-underline.svg' %}" alt="">
             <img src="{% static 'img/avatar-1.png' %}" alt="">
             <p id="ready-to-code">Ready to code today?</p>
             <button id="yes-btn">yes</button>
@@ -24,7 +24,7 @@
         </div>
         <div class="progress-content">
             <h1>Here's your road to becoming a Python programmer</h1>
-            <img id="road-underline" src="img/underlines/main-underline.svg" alt="">
+            <img id="road-underline" src="{% static 'img/underlines/main-underline.svg' %}" alt="">
             <div class="chapters">
                 <div class="chapter">
                     <div class="stars">
