@@ -26,57 +26,40 @@
             <h1>Here's your road to becoming a Python programmer</h1>
             <img id="road-underline" src="{% static 'img/underlines/main-underline.svg' %}" alt="">
             <div class="chapters">
-                <div class="chapter transit">
-                    <div class="stars">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                    </div>
-                    <div class="chapter-number greeny">
-                        <p>1</p>
-                    </div>
-                    <div class="chapter-completion-rate">
-                        <p>chapter 1: 0%</p>
-                    </div>
-                </div>
-                <div class="chapter transit">
-                    <div class="stars">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                    </div>
-                    <div class="chapter-number orange">
-                        <p>2</p>
-                    </div>
-                    <div class="chapter-completion-rate">
-                        <p>chapter 2: 0%</p>
-                    </div>
-                </div>
-                <div class="chapter transit">
-                    <div class="stars">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                    </div>
-                    <div class="chapter-number yellow">
-                        <p>3</p>
-                    </div>
-                    <div class="chapter-completion-rate">
-                        <p>chapter 3: 0%</p>
-                    </div>
-                </div>
-                <div class="chapter transit">
-                    <div class="stars">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                        <img src="{% static 'img/star/empty-star.svg' %}" alt="">
-                    </div>
-                    <div class="chapter-number grey">
-                        <p>4</p>
-                    </div>
-                    <div class="chapter-completion-rate">
-                        <p>chapter 4: 0%</p>
-                    </div>
+                <div class="chapters">
+                    {% for course in courses %}
+                        {% if course.id in progress_data %}
+                        <!-- ✅ Completed -->
+                        <div class="chapter transit">
+                            <div class="stars">
+                            <img src="{% static 'img/star/full-star.svg' %}" alt="">
+                            <img src="{% static 'img/star/full-star.svg' %}" alt="">
+                            <img src="{% static 'img/star/full-star.svg' %}" alt="">
+                            </div>
+                            <div class="chapter-number greeny">
+                            <p>{{ forloop.counter }}</p>
+                            </div>
+                            <div class="chapter-completion-rate">
+                            <p>Chapter {{ forloop.counter }}: 100%</p>
+                            </div>
+                        </div>
+                        {% else %}
+                        <!-- 🚧 Not Completed -->
+                        <div class="chapter transit">
+                            <div class="stars">
+                            <img src="{% static 'img/star/empty-star.svg' %}" alt="">
+                            <img src="{% static 'img/star/empty-star.svg' %}" alt="">
+                            <img src="{% static 'img/star/empty-star.svg' %}" alt="">
+                            </div>
+                            <div class="chapter-number gray">
+                            <p>{{ forloop.counter }}</p>
+                            </div>
+                            <div class="chapter-completion-rate">
+                            <p>Chapter {{ forloop.counter }}: 0%</p>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
             <button id="continue-coding" class="transit">Continue coding</button>

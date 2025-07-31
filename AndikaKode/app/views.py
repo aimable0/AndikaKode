@@ -5,6 +5,8 @@ from django.contrib import messages
 from .forms import CreateUserForm
 from django.urls import reverse
 from .models import Course
+from django.utils import timezone
+from .models import UserCourseProgress
 
 from django.contrib.auth import authenticate, login, logout
 from uuid import UUID
@@ -21,11 +23,26 @@ def courses(request):
 
 def course(request, id: UUID):
     # course = Course.objects.filter(title__icontains="Chapter 1").first()
-    course = get_object_or_404(Course, id=id)
-    return render(request, "app/single_course.html", {"course": course})
+    # course = get_object_or_404(Course, id=id)
+    # return render(request, "app/single_course.html", {"course": course})
 
     # test
     # return HttpResponse(course)
+    course = get_object_or_404(Course, id=id)
+
+    if request.method == "POST":
+        UserCourseProgress.objects.update_or_create(
+            user=request.user,
+            course=course,
+            defaults={
+                "is_completed": True,
+                "completed_at": timezone.now()
+            }
+        )
+        # Optionally redirect to the next course
+        return redirect('andikakode:dashboard')  # or to next course
+
+    return render(request, "app/single_course.html", {"course": course})
 
 
 def registerPage(request):
@@ -66,7 +83,20 @@ def logoutUser(request):
 
 
 def dashboard(request):
-    return render(request, "app/dashboard.html")
+    user = request.user
+    courses = Course.objects.all()
+    progress_data = {
+        progress.course.id: progress.is_completed
+        for progress in UserCourseProgress.objects.filter(user=user)
+    }
+
+    return render(request, "app/dashboard.html", {
+        "user": user,
+        "courses": courses,
+        "progress_data": progress_data,
+    })
+
+    # return render(request, "app/dashboard.html")
 
 
 def about(request):
@@ -75,3 +105,23 @@ def about(request):
 
 def contact(request):
     return render(request, "app/contact.html")
+
+
+# dealing with courses
+def mark_course_complete(request, course_id):
+    course = get_object_or_404(Course, id=course_id)
+    user = request.user
+
+    # Mark as completed
+    progress, created = UserCourseProgress.objects.get_or_create(user=user, course=course)
+    progress.is_completed = True
+    progress.completed_at = timezone.now()
+    progress.save()
+
+    # Get the next course (based on ID ordering)
+    next_course = Course.objects.filter(id__gt=course.id).order_by('id').first()
+
+    if next_course:
+        return redirect('andikakode:course', next_course.id)
+    else:
+        return redirect('andikakode:dashboard')
